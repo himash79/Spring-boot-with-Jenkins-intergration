@@ -1,0 +1,15 @@
+01) Download and install Jenkins.
+02) Login Jenkins.
+03) Chosse `Create new Job` / `+ New Item` button.
+04) Enter the `Item Name` and choose `Freestyle project` then `OK`.
+05) 1) Check the `Github Project` and fill the `project url` & `Display name`.
+    2) Choose `Git under` under `Source code management` and Add `Repository URL` 
+       then add `Credentials` of Jenkins login.
+    3) Check branch details on `Branch Specifier`.
+    4) Check `Poll SCM` under `Build Triggers` and add schedule.
+       ex : * * * * *
+    5) Select `Add build step` under `Build` in `Invoke top-level Maven targets` and 
+       add `clean install` under `Goal`.
+    6) `Apply` & `OK`.
+06) Goto `Dashboard` and redirect to project were create and check 
+    build status left bottom corner under `build history`.
